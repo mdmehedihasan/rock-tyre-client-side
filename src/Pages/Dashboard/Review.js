@@ -6,7 +6,7 @@ const Review = ({ review }) => {
 
 
     return (
-        <div className='px-6'>
+        <div className='px-2'>
             <div className=" p-4 card lg:max-w-lg bg-slate-100 shadow-xl ">
                 <p className='text-justify'>{description}</p>
                 <p className='text-xl text-amber-500 text-center '>{name}</p>

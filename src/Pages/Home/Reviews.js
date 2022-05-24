@@ -11,12 +11,11 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div className='mb-20'>
-            <div className='text-center text-xl uppercase'>
-                <h3 className='font-bold text-primary'>Reviews</h3>
-                <h2>What Our Customer Say</h2>
-            </div>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2    lg:grid-cols-3 gap-10'>
+        <div className='mb-20 px-40'>
+            <h2 className='font-bold uppercase text-center text-2xl text-black py-3'>Reviews</h2>
+            <div className='bg-black w-100 mb-3 ' style={{ height: '1px' }}></div>
+
+            <div className='grid sm:grid-cols-1 md:grid-cols-2    lg:grid-cols-3 gap-2'>
                 {
                     reviews.map(review => <Review
                         key={review._id}
