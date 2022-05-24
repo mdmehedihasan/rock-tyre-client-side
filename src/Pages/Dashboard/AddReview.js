@@ -70,7 +70,7 @@ const AddReview = () => {
                             })}
                         />
                         <label className="label">
-                            {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                            {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
                         </label>
                     </div>
 
@@ -94,7 +94,7 @@ const AddReview = () => {
                             <option value="5⭐">5⭐</option>
 
                             <label className="label">
-                                {errors.rating?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                {errors.rating?.type === 'required' && <span className="label-text-alt text-red-500">{errors.rating.message}</span>}
                             </label>
 
                         </select>
