@@ -9,6 +9,8 @@ import Footer from './Pages/Shared/Footer';
 import NotFound from './Pages/Shared/NotFound';
 import AddReview from './Pages/Dashboard/AddReview';
 import Purchase from './Pages/Dashboard/Purchase';
+import Signup from './Pages/Login/Signup';
+import RequireAuth from './Pages/Login/RequireAuth';
 
 
 function App() {
@@ -21,10 +23,15 @@ function App() {
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
-        <Route path='/addreview' element={<AddReview></AddReview>}></Route>
+        <Route path='/review' element={<AddReview></AddReview>}></Route>
 
-        <Route path='/product/:productId' element={<Purchase></Purchase>}></Route>
+        <Route path='/product/:productId' element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>
+        }></Route>
 
       </Routes>
       <Footer></Footer>
