@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
 import { Route, Routes } from 'react-router-dom';
@@ -9,6 +8,8 @@ import Blog from './Pages/Blog/Blog';
 import Footer from './Pages/Shared/Footer';
 import NotFound from './Pages/Shared/NotFound';
 import AddReview from './Pages/Dashboard/AddReview';
+import Purchase from './Pages/Dashboard/Purchase';
+
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/addreview' element={<AddReview></AddReview>}></Route>
+
+        <Route path='/product/:productId' element={<Purchase></Purchase>}></Route>
+
       </Routes>
       <Footer></Footer>
     </div>
