@@ -16,6 +16,11 @@ const Navbar = () => {
         <li><Link to="/portfolio">Portfolio</Link></li>
         <li><Link to="/review">Review</Link></li>
         <li><Link to="/blog">blog</Link></li>
+        {
+
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
+
 
         <li>{user
             ? <span className='flex bg-white'>
@@ -45,6 +50,11 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
+            {
+                user && <div className="navbar-end">
+                    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Dashboard</label>
+                </div>
+            }
 
         </div>
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Purchase = () => {
@@ -18,8 +19,32 @@ const Purchase = () => {
 
     const handlePurchase = event => {
         event.preventDefault();
-        const name = event.target.name.value;
-        console.log(product._id, product.name);
+
+        const order = {
+            purchaseId: product._id,
+            productName: product.name,
+            perPrice: product.price,
+            availableQuantity: product.available,
+            orderQuantity: event.target.orderQuantity.value,
+            userName: user.displayName,
+            userEmail: user.email,
+            phone: event.target.phone.value,
+
+        }
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    toast(`Order is confirmed for the Product: {product.name}`)
+                }
+            })
 
     }
 
@@ -45,8 +70,8 @@ const Purchase = () => {
                     <input type="text" name="name" disabled value={user?.displayName} className="input input-bordered w-full max-w-lg" />
                     <input type="email" name="email" disabled value={user?.email} className="input input-bordered w-full max-w-lg" />
                     <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-lg" />
-                    <input type="number" placeholder="Product Quantity" className="input input-bordered w-full max-w-lg" />
-                    <textarea className="input input-bordered w-full max-w-lg" name="address" id="" cols="30" rows="10"> Your Address</textarea>
+                    <input type="number" name="orderQuantity" placeholder="Order Quantity" className="input input-bordered w-full max-w-lg" />
+                    <textarea placeholder='Your Address' className="input input-bordered w-full max-w-lg" name="address" id="" cols="30" rows="10"></textarea>
                     <input type="submit" value="Confirm Purchase" placeholder="Type here" className="btn btn-primary w-full max-w-xs" />
 
                 </form>
