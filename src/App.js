@@ -47,8 +47,6 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='product' element={<AddProduct></AddProduct>}></Route>
           <Route path='profile' element={<Profile></Profile>}></Route>
-
-
         </Route>
 
       </Routes>
