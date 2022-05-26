@@ -8,6 +8,7 @@ import Blog from './Pages/Blog/Blog';
 import Footer from './Pages/Shared/Footer';
 import NotFound from './Pages/Shared/NotFound';
 import AddReview from './Pages/Dashboard/AddReview';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import Purchase from './Pages/Dashboard/Purchase';
 import Signup from './Pages/Login/Signup';
 import RequireAuth from './Pages/Login/RequireAuth';
@@ -43,6 +44,7 @@ function App() {
         }>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
+          <Route path='product' element={<AddProduct></AddProduct>}></Route>
 
         </Route>
 
