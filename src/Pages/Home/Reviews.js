@@ -11,7 +11,7 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div className='mb-20 px-40'>
+        <div id='reviews' className='mb-20 px-40'>
             <h2 className='font-bold uppercase text-center text-2xl text-black py-3'>Reviews</h2>
             <div className='bg-black w-100 mb-3 ' style={{ height: '1px' }}></div>
 
