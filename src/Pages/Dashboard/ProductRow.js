@@ -1,7 +1,28 @@
 import React from 'react';
+import useProduct from '../../Hooks/useProduct';
+
 
 const ProductRow = ({ product, index }) => {
-    const { name, image, available, } = product;
+    const [products, setProducts] = useProduct();
+    const { name, image, available } = product;
+
+    const handleDelete = (id) => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/product/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = products.filter(product => product._id !== id);
+                    setProducts(remaining);
+                })
+        }
+    }
+
+
     return (
 
         <tr>
@@ -13,7 +34,7 @@ const ProductRow = ({ product, index }) => {
             </div></td>
             <td>{name}</td>
             <td>{available}</td>
-            <td><button class="btn btn-sm">Delete</button>
+            <td><button className='btn btn-sm' onClick={() => handleDelete(product._id)}>Delete</button>
             </td>
 
         </tr>
