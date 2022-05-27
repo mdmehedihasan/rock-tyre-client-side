@@ -37,7 +37,7 @@ const MyOrders = () => {
                                 <th>{index + 1}</th>
                                 <td>{o.userName}</td>
                                 <td>{o.productName}</td>
-                                <td>${o.perPrice * o.orderQuantity}</td>
+                                <td>${o.totalPrice}</td>
                             </tr>)
                         }
 

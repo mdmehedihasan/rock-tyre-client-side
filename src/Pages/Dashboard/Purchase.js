@@ -19,13 +19,17 @@ const Purchase = () => {
 
     const handlePurchase = event => {
         event.preventDefault();
+        const orderQuantity = event.target.orderQuantity.value;
+        const perPrice = product.price;
+        const totalPrice = perPrice * orderQuantity;
 
         const order = {
             purchaseId: product._id,
             productName: product.name,
-            perPrice: product.price,
+            perPrice,
             availableQuantity: product.available,
-            orderQuantity: event.target.orderQuantity.value,
+            totalPrice,
+            orderQuantity,
             userName: user.displayName,
             userEmail: user.email,
             phone: event.target.phone.value,
