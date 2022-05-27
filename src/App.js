@@ -18,6 +18,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import Profile from './Pages/Dashboard/Profile';
 import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 
 function App() {
@@ -48,7 +49,9 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='product' element={<AddProduct></AddProduct>}></Route>
           <Route path='profile' element={<Profile></Profile>}></Route>
-          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='users' element={<RequireAdmin>
+            <Users></Users>
+          </RequireAdmin>}></Route>
         </Route>
 
       </Routes>
