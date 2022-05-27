@@ -9,7 +9,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/review`;
+        const url = `https://protected-dawn-69909.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

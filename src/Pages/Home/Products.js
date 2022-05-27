@@ -4,7 +4,7 @@ import Product from '../Dashboard/Product';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://protected-dawn-69909.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
