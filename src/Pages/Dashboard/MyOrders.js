@@ -28,6 +28,7 @@ const MyOrders = () => {
                             <th>User Name</th>
                             <th>Product Name</th>
                             <th>Total Price</th>
+                            <th>Pay</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,7 +37,7 @@ const MyOrders = () => {
                                 <th>{index + 1}</th>
                                 <td>{o.userName}</td>
                                 <td>{o.productName}</td>
-                                <td>{o.perPrice * o.orderQuantity}</td>
+                                <td>${o.perPrice * o.orderQuantity}</td>
                             </tr>)
                         }
 
