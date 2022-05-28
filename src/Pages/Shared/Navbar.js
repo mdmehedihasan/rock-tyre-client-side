@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
             {
                 user && <div className="navbar-end">
-                    <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Dashboard</label>
+                    <label for="my-drawer-2" className="btn bg-amber-400 drawer-button lg:hidden">Dashboard</label>
                 </div>
             }
 
