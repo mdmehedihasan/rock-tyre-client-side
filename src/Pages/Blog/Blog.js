@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div>
-            <div id='reviews' className='mb-20 px-40'>
+            <div id='reviews' className='xl:px-40 lg:px-40 md:px-16 sm:px-10 xs:px-8 lg:py-20 py-10'>
                 <h2 className='font-bold uppercase text-center text-2xl text-black py-3'>Our Blog</h2>
                 <div className='bg-black w-100 mb-3 ' style={{ height: '1px' }}></div>
 

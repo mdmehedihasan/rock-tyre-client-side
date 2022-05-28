@@ -10,12 +10,12 @@ import img8 from '../../assets/partner/img8.png';
 
 const Clients = () => {
     return (
-        <div className='px-40 my-6'>
+        <div className='xl:px-40 lg:px-40 md:px-16 sm:px-10 xs:px-8 lg:py-20 py-10'>
             <div>
                 <h2 className='font-bold uppercase text-center text-2xl text-black py-3'>Our Clients</h2>
                 <div className='bg-black w-100 mb-3 ' style={{ height: '1px' }}></div>
             </div>
-            <div className="carousel carousel-end rounded-box  grid lg:grid-cols-8 sm:grid-cols-4 xs:grid-cols-2">
+            <div className="carousel carousel-end rounded-box  grid lg:grid-cols-8 grid-cols-4">
                 <div class="carousel-item">
                     <img src={img1} alt="Parner" />
                 </div>
