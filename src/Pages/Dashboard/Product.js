@@ -25,7 +25,7 @@ const Product = ({ product }) => {
                 <p className='text-center'>Price Per Product:{price} Taka</p>
                 <div className="card-body items-center text-center">
 
-                    <button onClick={() => navigatePurchase(_id)} className='btn btn-success'>Purchase Now</button>
+                    <button onClick={() => navigatePurchase(_id)} className='btn bg-amber-400 '>Purchase Now</button>
 
                 </div>
             </div>
