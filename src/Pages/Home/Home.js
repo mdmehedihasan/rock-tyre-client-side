@@ -3,6 +3,7 @@ import About from './About';
 
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
+import Clients from './Clients';
 import Products from './Products';
 import Reviews from './Reviews';
 
@@ -14,8 +15,10 @@ const Home = () => {
             <Banner></Banner>
             <About></About>
             <Products></Products>
-            <Reviews></Reviews>
             <BusinessSummary></BusinessSummary>
+            <Reviews></Reviews>
+            <Clients></Clients>
+
         </div>
     );
 };
