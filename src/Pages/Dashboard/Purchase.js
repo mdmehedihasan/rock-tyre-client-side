@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Purchase = () => {
+    const notify = () => toast.success(`${product.name} - is added to your order page`);
     const { productId } = useParams();
     //for user name and email form auth
     const [user, loading, error] = useAuthState(auth);
@@ -50,6 +51,7 @@ const Purchase = () => {
                 }
             })
 
+
     }
 
     return (
@@ -76,7 +78,7 @@ const Purchase = () => {
                     <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-lg" />
                     <input type="number" name="orderQuantity" placeholder="Order Quantity" className="input input-bordered w-full max-w-lg" />
                     <textarea placeholder='Your Address' className="input input-bordered w-full max-w-lg" name="address" id="" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Confirm Purchase" placeholder="Type here" className="btn btn-primary w-full max-w-xs" />
+                    <input onClick={notify} type="submit" value="Confirm Purchase" className="btn btn-primary w-full max-w-xs" />
 
                 </form>
             </div>
