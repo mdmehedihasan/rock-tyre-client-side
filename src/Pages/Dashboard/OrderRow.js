@@ -10,7 +10,7 @@ const OrderRow = ({ order, index }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`
+            const url = `https://protected-dawn-69909.herokuapp.com/orders/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
