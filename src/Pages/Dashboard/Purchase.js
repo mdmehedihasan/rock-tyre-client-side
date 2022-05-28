@@ -76,7 +76,7 @@ const Purchase = () => {
                     <input type="text" name="name" disabled value={user?.displayName} className="input input-bordered w-full max-w-lg" />
                     <input type="email" name="email" disabled value={user?.email} className="input input-bordered w-full max-w-lg" />
                     <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-lg" />
-                    <input type="number" name="orderQuantity" placeholder="Order Quantity" className="input input-bordered w-full max-w-lg" />
+                    <input type="number" min={product.minimum} max={product.available} name="orderQuantity" placeholder={product.minimum} className="input input-bordered w-full max-w-lg" />
                     <textarea placeholder='Your Address' className="input input-bordered w-full max-w-lg" name="address" id="" cols="30" rows="10"></textarea>
                     <input onClick={notify} type="submit" value="Confirm Purchase" className="btn bg-amber-400 my-4 w-full max-w-xs" />
 
