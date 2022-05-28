@@ -70,7 +70,7 @@ const Portfolio = () => {
                         <a className='btn btn-sm' href="https://the-tour-bees-cdf1c.web.app/"> Click Here</a>
                     </div>
                     <div className='text-center font-bold bg-slate-300 p-4'>
-                        <h1 className='text-amber-400'>Project 2</h1>
+                        <h1 className='text-amber-400'>Project 3</h1>
                         <p>Project Name:ICE CREAM Site</p>
                         <a className='btn btn-sm' href="https://icecream-fans.netlify.app/"> Click Here</a>
                     </div>
