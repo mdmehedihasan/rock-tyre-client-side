@@ -32,11 +32,7 @@ const OrderRow = ({ order, index }) => {
 
             <td>
                 {(totalPrice && !paid) && <button className='btn btn-sm' onClick={() => handleDelete(order._id)}>Delete</button>}
-
             </td>
-
-
-
         </tr>
     );
 };
